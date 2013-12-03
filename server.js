@@ -7,7 +7,6 @@ require(path.join(__dirname, 'config', 'paths'));
 
 var config = require(path.join(PATHS.config, 'config'));
 
-var app = express();
 var auth = {};
 
 /**
@@ -21,6 +20,12 @@ var db = mongoose.connect(config.db);
 var modelsPath = PATHS.models;
 require(path.join(modelsPath, 'user'));
 require(path.join(modelsPath, 'post'));
+
+/**
+ * Bootstrap Expres with Config
+ */
+var app = express();
+require(path.join(PATHS.config, 'express'))(app, passport, db);
 
 /**
  * Bootstrap Routes
