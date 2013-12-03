@@ -1,0 +1,24 @@
+{
+  "name": "snap-base",
+  "author": "Olu Ayandosu",
+  "main": "base.css",
+  "dependencies": {
+    "normalize-css": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/madebycinch/snap-base",
+  "_release": "e3ca87fa3c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e3ca87fa3cceeb1c03726ffaaeeb0296bcb61be6"
+  },
+  "_source": "git://github.com/madebycinch/snap-base.git",
+  "_target": "*",
+  "_originalSource": "snap-base",
+  "_direct": true
+}

@@ -1,0 +1,38 @@
+/*
+ * Base stylesheet built on normalize.css
+ * Author: Olu Ayandosu
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+dl,
+dd,
+ul,
+ol,
+fieldset,
+blockquote {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}

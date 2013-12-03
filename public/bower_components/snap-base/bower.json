@@ -1,0 +1,14 @@
+{
+  "name": "snap-base",
+  "version": "0.0.1",
+  "author": "Olu Ayandosu",
+  "main": "base.css",
+  "dependencies": {
+    "normalize-css": "*"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
