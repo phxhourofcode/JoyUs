@@ -18,8 +18,7 @@ exports.create = function(req, res) {
 
     post.save(function(err) {
         if (err) {
-            console.log(err);
-            return res.status(401).send(err);
+            return res.status(500).send(err);
         } else {
             res.jsonp(post);
         }

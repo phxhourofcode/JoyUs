@@ -7,7 +7,24 @@ html(lang="en")
 
     title JoyUs
 
+    link(rel='stylesheet', href='/bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='/bower_components/snap-base/base.css')
+    link(rel='stylesheet', href='/bower_components/foundation/css/foundation.css')
+
+    script(src='/bower_components/jquery/jquery.js')
+    script(src='/bower_components/foundation/js/foundation.js')
+    script(src='/bower_components/lodash/dist/lodash.min.js')
+    script(src='/bower_components/lodash/dist/lodash.underscore.min.js')
+    script(src='/bower_components/backbone/backbone-min.js')
+    script(src='/js/namespace.js')
+    script(src='/js/templates.js')
+    script(src='/js/models/post.js')
+    script(src='/js/collections/posts.js')
+    script(src='/js/views/posts/list-view.js')
+    script(src='/js/views/posts/new-view.js')
+    script(src='/js/main.js')
   body
     h1 JoyUs
-    .container
+
+    #content.container
       block content

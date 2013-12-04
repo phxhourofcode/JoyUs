@@ -1,11 +1,6 @@
 var path = require('path');
 
 module.exports = function(app, passport, auth) {
-
-  //Home route
-  var index = require(path.join(PATHS.controllers, 'index'));
-  app.get('/', index.render);
-
   //  Post Routes
   var posts = require(path.join(PATHS.controllers, 'posts'));
 
@@ -18,4 +13,7 @@ module.exports = function(app, passport, auth) {
   // app.put('/api/posts/:postId', auth.requiresLogin, auth.post.hasAuthorization, posts.update);
   // app.del('/api/posts/:postId', auth.requiresLogin, auth.post.hasAuthorization, posts.destroy);
 
+  //Home route
+  var index = require(path.join(PATHS.controllers, 'index'));
+  app.get('*', index.render);
 };
