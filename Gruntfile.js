@@ -16,37 +16,41 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          '/public/js/templates.js': ['/public/templates/*.jade']
+          'public/js/templates.js': ['public/templates/**/*.jade']
         }
       }
     },
 
-    sass: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'styles',
-          src: ['*.scss'],
-          dest: '/publi/css',
-          ext: '.css'
-        }]
-      }
-    },
+    // sass: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: 'styles',
+    //       src: ['*.scss'],
+    //       dest: '/publi/css',
+    //       ext: '.css'
+    //     }]
+    //   }
+    // },
 
-    requirejs: {
-      build: {
-        options:{
-          baseUrl: 'public/js',
-          mainConfigFile: 'public/js/main.js',
-          name: 'main',
-          out: 'public/dist/js/main.js'
-        }
-      }
-    },
+    // requirejs: {
+    //   build: {
+    //     options:{
+    //       baseUrl: 'public/js',
+    //       mainConfigFile: 'public/js/main.js',
+    //       name: 'main',
+    //       out: 'public/dist/js/main.js'
+    //     }
+    //   }
+    // },
 
     watch: {
       templates: {
-        files:" "
+        files: ['public/templates/**/*.jade'],
+        tasks: ['jade'],
+        options: {
+          livereload: true,
+        },
       }
     },
 
@@ -75,6 +79,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-nodemon');
